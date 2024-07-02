@@ -18,3 +18,7 @@ All keys are to be kept alive by clients calling this endpoint every 5 minutes. 
 
 Apart from these endpoints, following rules should be enforced:
 R1. All blocked keys should get released automatically within 60 secs if E3 is not called.  => check_point for this internally.
+
+Extra Endpoints :-
+get '/get_all_available_keys' to get all available keys
+get '/get_all_served_keys' to get all served keys
