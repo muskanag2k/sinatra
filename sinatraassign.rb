@@ -96,18 +96,19 @@ get '/get_key' do
 end
 
 post '/unblock_key/:key' do
-  key = keys_obj.unblock_key(params['key'])
+  key = keys_obj.unblock_key(params[:key])
   JSON key: key
 end
 
 post '/delete_key/:key' do
-  key = keys_obj.delete_key(params['key'])
+  key = keys_obj.delete_key(params[:key])
   JSON key: key
 end
 
 post '/keep_alive/:key' do
-  key = keys_obj.keep_alive(params['key'])
+  key = keys_obj.keep_alive(params[:key])
   JSON key: key
+  puts "#{key} is refreshed...."
 end
 
 get '/get_all_available_keys' do
